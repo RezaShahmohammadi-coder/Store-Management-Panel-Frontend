@@ -1,0 +1,221 @@
+/* =========================
+   PAGE
+========================= */
+
+.page {
+  min-height: 100vh;
+  background: #f7f5f0;
+  color: #172131;
+}
+
+
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+  padding: 52px 4rem 100px;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.pageIntro {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 32px;
+}
+
+.titleArea {
+  text-align: right;
+}
+
+.sectionLabel {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #a88958;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  font-family: Georgia, serif;
+}
+
+.titleArea h2 {
+  margin: 0;
+
+  color: #111925;
+
+  font-size: 30px;
+
+  font-weight: 600;
+}
+
+.titleArea p {
+  margin: 9px 0 0;
+
+  color: #77736c;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+.addButton {
+  height: 50px;
+
+  padding: 0 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border-radius: 10px;
+
+  background: #162336;
+
+  border: 1px solid #24354d;
+
+  color: #f7f4ed;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition: all 0.2s ease;
+}
+
+.addButton:hover {
+  background: #1d3049;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(18, 30, 46, 0.12);
+}
+
+.plus {
+  color: #d1b071;
+
+  font-size: 20px;
+
+  line-height: 1;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.productsContainer {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+/* =========================
+   BOTTOM LOGO
+========================= */
+
+.bottomLogo {
+  position: fixed;
+
+  bottom: 20px;
+  left: 22px;
+
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #24231f;
+
+  color: #d6b779;
+
+  border: 1px solid #ad915d;
+
+  font-family: Georgia, serif;
+
+  font-size: 17px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .header {
+    padding: 0 1.5rem;
+  }
+
+  .main {
+    padding: 40px 1.5rem;
+  }
+
+  .pageIntro {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 20px;
+  }
+
+  .addButton {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .header {
+    height: 80px;
+  }
+
+  .main {
+    padding: 30px 15px;
+  }
+
+  .brand h1 {
+    font-size: 19px;
+  }
+
+  .adminInfo > span,
+  .divider {
+    display: none;
+  }
+
+  .titleArea h2 {
+    font-size: 25px;
+  }
+
+}

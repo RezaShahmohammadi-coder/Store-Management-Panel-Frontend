@@ -1,0 +1,309 @@
+.form {
+  width: min(900px, 92%);
+  margin: 50px auto;
+  padding: 35px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 35px;
+}
+
+.header span {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #999;
+  direction: ltr;
+}
+
+.header h1 {
+  margin: 8px 0 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #111;
+}
+
+.header p {
+  margin: 8px 0 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.number {
+  font-size: 60px;
+  font-weight: 900;
+  color: #eeeeee;
+  line-height: 1;
+  direction: ltr;
+}
+
+/* =========================
+   FIELDS
+========================= */
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.inputGroup label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* =========================
+   INPUT / SELECT / TEXTAREA
+========================= */
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid #dedede;
+  border-radius: 11px;
+
+  background: #fafafa;
+
+  padding: 13px 15px;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  /* متن تایپ شده */
+  color: #163a63;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Input و Select */
+
+.inputGroup input,
+.inputGroup select {
+  height: 50px;
+}
+
+/* Textarea */
+
+.inputGroup textarea {
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.8;
+}
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.inputGroup input::placeholder,
+.inputGroup textarea::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+/* =========================
+   FOCUS
+========================= */
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+  background: #fff;
+
+  border-color: #163a63;
+
+  box-shadow:
+    0 0 0 4px rgba(22, 58, 99, 0.08);
+}
+
+/* =========================
+   SELECT
+========================= */
+
+.inputGroup select {
+  color: #163a63;
+  cursor: pointer;
+}
+
+.inputGroup select option {
+  color: #163a63;
+  background: #fff;
+}
+
+/* گزینه پیش‌فرض Select */
+
+.inputGroup select option[value=""] {
+  color: #999;
+}
+
+/* =========================
+   PRICE
+========================= */
+
+.price {
+  position: relative;
+}
+
+.price input {
+  padding-left: 70px;
+}
+
+.price span {
+  position: absolute;
+
+  left: 15px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #888;
+  font-size: 11px;
+
+  pointer-events: none;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+  grid-column: 1 / -1;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 30px;
+  padding-top: 25px;
+
+  border-top: 1px solid #eee;
+}
+
+.footer p {
+  margin: 0;
+
+  color: #999;
+  font-size: 12px;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.submit {
+  border: none;
+  border-radius: 10px;
+
+  background: #163a63;
+  color: #fff;
+
+  padding: 13px 28px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+.submit:hover {
+  background: #102e4f;
+  opacity: 0.95;
+
+  transform: translateY(-2px);
+}
+
+.submit:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .form {
+    width: 92%;
+
+    padding: 22px;
+
+    margin: 25px auto;
+
+    border-radius: 18px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header p {
+    font-size: 13px;
+  }
+
+  .number {
+    font-size: 40px;
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+  }
+
+  .description {
+    grid-column: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+
+    gap: 15px;
+
+    align-items: stretch;
+  }
+
+  .footer p {
+    text-align: center;
+  }
+
+  .submit {
+    width: 100%;
+  }
+}

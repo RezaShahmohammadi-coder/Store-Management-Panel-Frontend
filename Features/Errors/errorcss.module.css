@@ -1,0 +1,58 @@
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.content h1 {
+  margin: 0 0 15px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.content p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 0.7;
+}
+
+.retry {
+  margin-top: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.retry:hover {
+  transform: translateY(-2px);
+}
